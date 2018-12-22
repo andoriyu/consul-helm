@@ -29,6 +29,7 @@ spec:
       annotations:
         "consul.hashicorp.com/connect-inject": "false"
     spec:
+      hostNetwork: false
       terminationGracePeriodSeconds: 10
 
       # Consul agents require a directory for data, even clients. The data
