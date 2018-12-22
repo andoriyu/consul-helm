@@ -41,6 +41,8 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.namespace
+            - name: CONSUL_HTTP_TOKEN
+              value: {{ .Values.syncCatalog.token }}
           command:
             - "/bin/sh"
             - "-ec"
