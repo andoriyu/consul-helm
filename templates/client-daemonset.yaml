@@ -125,7 +125,13 @@ spec:
               hostPort: 8502
               name: grpc
             - containerPort: 8301
-              name: serflan
+              hostPort: 8301
+              name: serflan-tcp
+              protocol: "TCP"
+            - containerPort: 8301
+              hostPort: 8301
+              name: serflan-udp
+              protocol: "UDP"
             - containerPort: 8302
               name: serfwan
             - containerPort: 8300
